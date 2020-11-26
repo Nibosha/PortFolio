@@ -1,0 +1,190 @@
+.border-hexagon{
+    position: absolute;
+    height: 132px;
+    width: 132px;
+    display: flex;
+    z-index: 2;
+    animation: blinkHex 10s linear infinite;
+    opacity: 0;
+}
+
+.border-hexagon img{
+    height: 100%;
+    width: 100%;
+}
+
+.hex-top-left{
+    top: 0;
+    left: 0;
+}
+
+.hex-top-right{
+    top: 0;
+    right: 0;
+    transform: scale(-1, 1);
+}
+
+.hex-bot-left{
+    bottom: 0;
+    left: 0;
+    transform: scale(1,-1);
+}
+
+.hex-bot-right{
+    bottom: 0;
+    right: 0;
+    transform: scale(-1);
+}
+
+.hex-top-1{
+    top:0;
+    left: 20%;
+}
+
+.hex-top-2{
+    top:0;
+    left: 45%;
+}
+
+.hex-top-3{
+    top:0;
+    left: 65%;
+}
+
+.hex-bot-1{
+    bottom: 0;
+    left: 20%;
+    transform: scale(-1);
+}
+
+.hex-bot-2{
+    bottom: 0;
+    left: 45%;
+    transform: scale(-1);
+}
+
+.hex-bot-3{
+    bottom: 0;
+    left: 65%;
+    transform: scale(-1);
+}
+
+.hex-mid-left{
+    top: 178px;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.hex-mid-right{
+    top: 200px;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.hidden-hexagon{
+    left: -100%;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.delay-1{
+    animation-delay: 1.25s;
+}
+
+.delay-2{
+    animation-delay: 2.5s;
+}
+
+.delay-3{
+    animation-delay: 3.75s;
+}
+
+.delay-4{
+    animation-delay: 5s;
+}
+
+aside .hex-mid-left{
+    left: -8px;
+}
+
+aside .hex-mid-right{
+    right: -8px;
+}
+
+@media (max-width: 720px){
+    .hex-top-1{
+        left: 28%;
+    }
+
+    .hex-top-2{
+        left: 55%;
+    }
+
+    .hex-bot-1{
+        left: 28%;
+    }
+
+    .hex-bot-2{
+        left: 55%;
+    }
+
+    .hex-top-3, .hex-bot-3{
+        display: none;
+    }
+}
+
+@media (max-width: 548px){
+    .hex-top-1{
+        left: 35%;
+    }
+
+    .hex-bot-1{
+        left: 35%;
+    }
+
+    .hex-top-2, .hex-bot-2 {
+        display: none;
+    } 
+
+}
+
+@media (max-width: 378px){
+    .hex-top-1, .hex-bot-1, .hex-top-right, .hex-bot-left {
+        display: none;
+    }
+}
+
+@media (max-height: 620px){
+    .hex-mid-left, .hex-mid-right{
+        display: none;
+    }
+}
+
+@keyframes blinkHex{
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 0;
+    }
+
+    40%{
+        opacity: 0.3;
+    }
+
+    50%{
+        opacity: 0.8;
+    }
+
+    60%{
+        opacity: 0.3;
+    }
+
+    75%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}

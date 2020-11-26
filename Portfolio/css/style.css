@@ -1,0 +1,267 @@
+@import "header.css";
+@import "hex.css";
+
+:root{
+    --main-color: #cad2c5;
+    --font-color: #2f3e46;
+    --border-color:  #8acfad;
+    --deco-color-1: #4cc9f0;
+    --deco-color-2: #52796f;
+}
+
+html{
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    
+}
+
+*{
+    font-family: 'Goldman', cursive;
+    color: var(--main-color);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header, main, aside, section, footer{ 
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+header{
+    width: 100%; 
+    height: 15vh;
+    overflow-x: hidden;
+}
+
+aside{
+    width: 12.5%;
+    height: 85vh;
+    background: black;
+    overflow: hidden;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    align-items: center;
+    z-index: 3;
+}
+
+section{
+    width: 75%;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    position: relative;
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    background: black;
+}
+
+main{
+    width: 100%; 
+    height: 85vh; 
+    background: var(--font-color);
+}
+
+
+
+.aside-left-open{
+    width: 30%;
+}
+
+.aside-left-open .hidden-hexagon{
+    left: 0;
+}
+
+.section-open{
+    width: 70%;
+}
+
+.aside-right-close{
+    width: 0;
+}
+
+.nav-aside{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+
+.nav-option{
+    cursor: pointer;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+
+#aboutMe{
+    pointer-events: none;
+}
+
+#aboutMe h2{
+    color: var(--deco-color-1);
+}
+
+.nav-option:hover.nav-option h2{
+    filter: brightness(75%);
+    -webkit-filter: brightness(75%);
+}
+
+.nav-option h2{
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    white-space: nowrap;
+}
+
+.content-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.67,.01,.61,1);
+    overflow: hidden;
+    transform: scale(0) rotate(-30deg);
+}
+
+.content-tittle{
+    font-size: 2.4rem;
+    letter-spacing: 0.6rem;
+}
+
+.content-body{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 50%;
+    padding: 0 2.4rem;
+}
+
+.aboutMe-content-text{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    font-size: 1.6rem;
+    justify-content: flex-end;
+    align-items: center;
+    transition-duration: 1s;
+    
+}
+
+.aboutMe-content-text p{
+    margin: 1.6rem 0;
+    
+}
+
+
+.aboutMe-content-img{
+    display: flex;
+    width: 40%;
+    justify-content: flex-start;
+    
+}
+
+.aboutMe-content-img img{
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    filter: grayscale(100%);
+    transition-duration: 0.5s;
+}
+
+.aboutMe-content-img img:hover{
+    filter: grayscale(0);
+}
+
+.container-center{
+   left: 0;
+   opacity: 1;
+   transform: scale(1) rotate(0deg);
+}
+
+.container-hidden{
+    left: -100%;
+    
+}
+
+
+
+@media screen and (max-width: 786px){
+    header{
+        height: 15vmax;
+        justify-content: center;
+    }
+
+    aside{
+        display: none;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .page-name h1{
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .circle{
+        width: 8vmax;
+        height: 8vmax;
+    }
+
+    .content-container{
+        height: 85 vh;
+    }
+
+    .content-tittle{
+        height: 10vh;
+        padding-top: 2vh;
+    }
+
+    .content-body{
+        height: 75vh;
+        flex-direction: column;
+        padding: 0 1.2rem;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .aboutMe-content-text{
+        width: 90%;
+    }
+
+    .aboutMe-content-img{
+        height: 40%;
+        width: 100%;
+        justify-content: center;
+        padding: 1.2rem;
+    }
+
+    .aboutMe-content-img img{
+        height: 100%;
+    }
+
+    
+
+}
+
+@keyframes rotation{
+    0%{
+        transform: rotate(0%);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

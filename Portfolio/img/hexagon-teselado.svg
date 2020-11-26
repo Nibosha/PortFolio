@@ -1,0 +1,11 @@
+<svg width="76" height="70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="38,20 54,30 54,50 38,60 20,50 20,30 38,20" style="fill:rgba(47, 62, 70, 0.9);stroke:rgb(47, 62, 70);stroke-width:1"/>
+    <polyline points="-2,20 14,30 14,50 -2,60 -2,20" style="fill:rgba(47, 62, 70, 0.9);stroke:rgb(47, 62, 70);stroke-width:1"/>
+    <polyline points="78,20 78,60 60,50 60,30 78,20" style="fill:rgba(47, 62, 70, 0.9);stroke:rgb(47, 62, 70);stroke-width:1"/>
+    <polyline points="34,0 34,15 18,25 0,15 0,0" style="fill:rgba(47, 62, 70, 0.9);stroke:rgb(47, 62, 70);stroke-width:1"/>
+    <polyline points="72,0 72,15 56,25 38,15 38,0" style="fill:rgba(47, 62, 70, 0.9);stroke:rgb(47, 62, 70);stroke-width:1"/>
+    <polyline points="18,55 34,65 34,75 0,75 0,65 18,55" style="fill:rgba(47, 62, 70, 0.9);stroke:rgb(47, 62, 70);stroke-width:1"/>
+    <polyline points="56,55 72,65 72,75 38,75 38,65 56,55" style="fill:rgba(47, 62, 70, 0.9);stroke:rgb(47, 62, 70);stroke-width:1"/>
+    
+    
+</svg>

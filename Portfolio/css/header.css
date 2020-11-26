@@ -1,0 +1,122 @@
+.page-name h1{
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    white-space: nowrap;
+}
+
+.teselado{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/hexagon-teselado.svg");
+    background-repeat: repeat;
+}
+
+.aesthetic-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400vw;
+    height: 100%;
+    background: rgb(247,37,133);
+    background: linear-gradient(60deg, rgba(247,37,133,1) 0%, rgba(114,9,183,1) 7%,
+     rgba(58,12,163,1) 12%, rgba(67,97,238,1) 17%, rgba(76,201,240,1) 25%,
+      rgba(67,97,238,1) 32%, rgba(58,12,163,1) 37%, rgba(114,9,183,1) 42%,
+       rgba(247,37,133,1) 50%, rgba(114,9,183,1) 57%, rgba(58,12,163,1) 62%,
+        rgba(67,97,238,1) 67%, rgba(76,201,240,1) 75%, rgba(67,97,238,1) 82%,
+         rgba(58,12,163,1) 87%, rgba(114,9,183,1) 92%, rgba(247,37,133,1) 100%);    
+   animation: backgroundMovement 15s linear infinite;
+}
+
+.head-logo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 1rem;
+    width: 20%;
+    z-index: 2;
+}
+
+.head-logo img{
+    height: 80%;
+}
+.page-name{
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.page-name a{
+    text-decoration: none;
+    color: var(--border-color);
+}
+
+
+
+@media screen and (max-width: 786px){
+    #hamburguer{
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        width: 20%;
+    }
+    
+    .circle{
+        width: 12vh;
+        height: 12vh;
+        background: var(--main-color);
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .line{
+        position: absolute;
+        background: var(--font-color);
+        height: 10%;
+        width: 60%;
+        border-radius: 15%;
+        left: 20%;
+        transition: all cubic-bezier(0.26, 0.1, 0.27, 1.35) 0.35s;
+    }
+    
+    .top{
+        top: 25%;
+    }
+    
+    .mid{
+        top: 45%;
+    }
+    
+    .bot{
+        top: 65%;
+    }
+    
+    .icon.close .top{
+        transform: rotate(45deg);
+        top: 48%;
+    }
+    
+    .icon.close .mid, .icon.close .bot{
+        transform: rotate(-45deg);
+        top: 48%;
+    }
+}
+
+@keyframes backgroundMovement{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(-50%);
+    }
+}
