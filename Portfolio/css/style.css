@@ -1,5 +1,6 @@
 @import "header.css";
 @import "hex.css";
+@import "container.css";
 
 :root{
     --main-color: #cad2c5;
@@ -35,6 +36,7 @@ header{
     width: 100%; 
     height: 15vh;
     overflow-x: hidden;
+    justify-content: flex-start;
 }
 
 aside{
@@ -71,6 +73,10 @@ main{
     width: 30%;
 }
 
+.aside-right-open{
+    width: 30%;
+}
+
 .aside-left-open .hidden-hexagon{
     left: 0;
 }
@@ -83,15 +89,17 @@ main{
     width: 0;
 }
 
+.aside-left-close{
+    width: 0;
+}
+
 .nav-aside{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     height: 100%;
     justify-content: space-evenly;
     align-items: center;
-    
-
 }
 
 .nav-option{
@@ -99,6 +107,25 @@ main{
     filter: brightness(100%);
     -webkit-filter: brightness(100%);
 }
+
+.nav-option-desplegable{
+    cursor: pointer;
+}
+
+.nav-desplegable{
+    padding-left: 1rem;
+    cursor: pointer;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    transition: all 0.5s ease-in 0s;
+    display: none;
+    align-content: center;
+}
+
+.nav-desplegable .nav-option{
+    padding-top: 2rem;
+}
+
 
 #aboutMe{
     pointer-events: none;
@@ -113,88 +140,17 @@ main{
     -webkit-filter: brightness(75%);
 }
 
-.nav-option h2{
+.nav-option h2, .nav-option-desplegable h2{
     font-size: 1.8rem;
     letter-spacing: 0.4rem;
     white-space: nowrap;
 }
 
-.content-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    opacity: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center; 
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(.67,.01,.61,1);
-    overflow: hidden;
-    transform: scale(0) rotate(-30deg);
+.nav-option h3{
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    white-space: nowrap;
 }
-
-.content-tittle{
-    font-size: 2.4rem;
-    letter-spacing: 0.6rem;
-}
-
-.content-body{
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    height: 50%;
-    padding: 0 2.4rem;
-}
-
-.aboutMe-content-text{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    font-size: 1.6rem;
-    justify-content: flex-end;
-    align-items: center;
-    transition-duration: 1s;
-    
-}
-
-.aboutMe-content-text p{
-    margin: 1.6rem 0;
-    
-}
-
-
-.aboutMe-content-img{
-    display: flex;
-    width: 40%;
-    justify-content: flex-start;
-    
-}
-
-.aboutMe-content-img img{
-    height: 100%;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    filter: grayscale(100%);
-    transition-duration: 0.5s;
-}
-
-.aboutMe-content-img img:hover{
-    filter: grayscale(0);
-}
-
-.container-center{
-   left: 0;
-   opacity: 1;
-   transform: scale(1) rotate(0deg);
-}
-
-.container-hidden{
-    left: -100%;
-    
-}
-
 
 
 @media screen and (max-width: 786px){
