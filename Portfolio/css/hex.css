@@ -6,6 +6,7 @@
     z-index: 2;
     animation: blinkHex 10s linear infinite;
     opacity: 0;
+    pointer-events: none;
 }
 
 .border-hexagon img{

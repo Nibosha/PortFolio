@@ -28,6 +28,10 @@
     padding: 0 2.4rem;
 }
 
+.col-body{
+    flex-direction: column;
+}
+
 .aboutMe-content-text, .centre-content-text{
     display: flex;
     flex-direction: column;

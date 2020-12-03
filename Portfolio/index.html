@@ -83,7 +83,7 @@
             <div class="border-hexagon hex-mid-left "><img src="img/hexagon-border-rect-1-part2.svg" alt=""></div>
 
             
-            <div class="content-container container-center" id="aboutMe-container">
+            <div class="content-container" id="aboutMe-container">
                 <h2 class="content-tittle">About me</h2>
                 <div class="content-body">
                     <div class="aboutMe-content-img">
@@ -99,7 +99,7 @@
             
 
             
-            <div class="content-container" id="curriculum-container">
+            <div class="content-container container-center" id="curriculum-container">
                 <h2 class="content-tittle">Curriculum</h2>
                 <div class="content-body">
                         
@@ -120,15 +120,43 @@
 
             <div class="content-container" id="calculadora-container">
                 <h2 class="content-tittle">Calculadora</h2>
-                <div class="content-body">
+                <div class="content-body col-body">
                     <div class="centre-content-text">
                         <p>La Calculadora está programada 100% en JS.</p>
                         <p>En un futuro le añadiré más utilidades, por ahora simplemente funciona ¡Pruébala!</p>
                     </div>
-                    <div class="calculadora">
-                        <!--
-                            LA CALCULADORA
-                        -->
+                    <div class="calculadora-container">
+                        <div class="calculadora-screen">
+                            1234
+                        </div>
+                        <div class="calculadora-botton-row">
+                            <div class="calculadora-botton" id="btn-7">7</div>
+                            <div class="calculadora-botton" id="btn-8">8</div>
+                            <div class="calculadora-botton" id="btn-9">9</div>
+                            <div class="calculadora-botton" id="btn-del">DEL</div>
+                            <div class="calculadora-botton" id="btn-ac">AC</div>
+                        </div>
+                        <div class="calculadora-botton-row">
+                            <div class="calculadora-botton" id="btn-4">4</div>
+                            <div class="calculadora-botton" id="btn-5">5</div>
+                            <div class="calculadora-botton" id="btn-6">6</div>
+                            <div class="calculadora-botton" id="btn-mult">x</div>
+                            <div class="calculadora-botton" id="btn-div">:</div>
+                        </div>
+                        <div class="calculadora-botton-row">
+                            <div class="calculadora-botton" id="btn-1">1</div>
+                            <div class="calculadora-botton" id="btn-2">2</div>
+                            <div class="calculadora-botton" id="btn-3">3</div>
+                            <div class="calculadora-botton" id="btn-sum">+</div>
+                            <div class="calculadora-botton" id="btn-rest">-</div>
+                        </div>
+                        <div class="calculadora-botton-row">
+                            <div class="calculadora-botton" id="btn-0">0</div>
+                            <div class="calculadora-botton" id="btn-punto">.</div>
+                            <div class="calculadora-botton" id="btn-exp">EXP</div>
+                            <div class="calculadora-botton" id="btn-ans">Ans</div>
+                            <div class="calculadora-botton" id="btn-equal">=</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -201,9 +229,8 @@
             </nav>
         </aside>
     </main>
-    
-
 
     <script src="js/jqueryScripts.js"></script>
+    <script src="js/calculadora.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 @import "header.css";
 @import "hex.css";
 @import "container.css";
+@import "calculadora.css";
 
 :root{
     --main-color: #cad2c5;
@@ -221,3 +222,10 @@ main{
         transform: rotate(360deg);
     }
 }
+
+@font-face {
+    font-family: 'Digital Numbers Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Digital Numbers Regular'), url('../fonts/DigitalNumbers-Regular.woff') format('woff');
+    }
