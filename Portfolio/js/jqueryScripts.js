@@ -66,6 +66,15 @@ $("#cambio-fuentes").click(function(){
     $("#cambio-fuentes-container").addClass("container-center");
 });
 
+$("#url").click(function(){
+    $(".nav-option h2, .nav-option h3").css("color","var(--main-color-1)");
+    $(".nav-option").css("pointer-events","visible");
+    $("#url h3").css("color","var(--deco-color-1)");
+    $("#url").css("pointer-events","none");
+    $(".content-container").removeClass("container-center");
+    $("#url-container").addClass("container-center");
+});
+
 $("#certificado").click(function(){
     $(".nav-option h2, .nav-option h3").css("color","var(--main-color-1)");
     $(".nav-option").css("pointer-events","visible");
@@ -122,4 +131,40 @@ $(".aside-right").mouseleave(function(){
 $(".nav-option-desplegable>h2").click(function(){
     $(this).siblings().toggle(0.5);
 });
+
+//=================CAMBIO FUENTE=====================================================//
+$("#cambio-fuentes-container").dblclick(function(){
+    $(this).css("background", function(){
+        var r = Math.round(Math.random()*255);
+        var g = Math.round(Math.random()*255);
+        var b = Math.round(Math.random()*255);
+        return "rgb("+r+", "+g+", "+b+")";
+    });
+});
+
+$("#fontsize-select").change(function(){
+    let val = $(this).val();
+    switch (val) {
+        case "small":
+            $("#cambio-tittle").css("font-size","1.8rem");
+            $("#cambio-text").css("font-size","1.2rem");
+            break;
+        case "normal":
+            $("#cambio-tittle").css("font-size","2.4rem");
+            $("#cambio-text").css("font-size","1.6rem");
+            break;
+        case "big":
+            $("#cambio-tittle").css("font-size","3.2rem");
+            $("#cambio-text").css("font-size","2.1rem");
+            break;
+        case "huge":
+            $("#cambio-tittle").css("font-size","4.8rem");
+            $("#cambio-text").css("font-size","3.2rem");
+             break;
+        default:
+            break;
+    }
+});
+
+$("#visitas").val(localStorage.visitas);
 

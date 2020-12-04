@@ -83,7 +83,7 @@
             <div class="border-hexagon hex-mid-left "><img src="img/hexagon-border-rect-1-part2.svg" alt=""></div>
 
             
-            <div class="content-container" id="aboutMe-container">
+            <div class="content-container  container-center" id="aboutMe-container">
                 <h2 class="content-tittle">About me</h2>
                 <div class="content-body">
                     <div class="aboutMe-content-img">
@@ -99,7 +99,7 @@
             
 
             
-            <div class="content-container container-center" id="curriculum-container">
+            <div class="content-container" id="curriculum-container">
                 <h2 class="content-tittle">Curriculum</h2>
                 <div class="content-body">
                         
@@ -127,14 +127,13 @@
                     </div>
                     <div class="calculadora-container">
                         <div class="calculadora-screen">
-                            1234
                         </div>
                         <div class="calculadora-botton-row">
                             <div class="calculadora-botton" id="btn-7">7</div>
                             <div class="calculadora-botton" id="btn-8">8</div>
                             <div class="calculadora-botton" id="btn-9">9</div>
-                            <div class="calculadora-botton" id="btn-del">DEL</div>
-                            <div class="calculadora-botton" id="btn-ac">AC</div>
+                            <div class="calculadora-botton long-text" id="btn-del">DEL</div>
+                            <div class="calculadora-botton long-text" id="btn-ac">AC</div>
                         </div>
                         <div class="calculadora-botton-row">
                             <div class="calculadora-botton" id="btn-4">4</div>
@@ -153,8 +152,8 @@
                         <div class="calculadora-botton-row">
                             <div class="calculadora-botton" id="btn-0">0</div>
                             <div class="calculadora-botton" id="btn-punto">.</div>
-                            <div class="calculadora-botton" id="btn-exp">EXP</div>
-                            <div class="calculadora-botton" id="btn-ans">Ans</div>
+                            <div class="calculadora-botton long-text" id="btn-exp">EXP</div>
+                            <div class="calculadora-botton long-text" id="btn-ans">Ans</div>
                             <div class="calculadora-botton" id="btn-equal">=</div>
                         </div>
                     </div>
@@ -162,30 +161,77 @@
             </div>
 
             <div class="content-container" id="cambio-fuentes-container">
-                <h2 class="content-tittle">Cambio de Fuentes</h2>
-                <div class="content-body">
-                    <div class="centre-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et deleniti incidunt asperiores quaerat possimus eius temporibus excepturi, odit, voluptas doloremque veritatis? Beatae, nam. Inventore doloremque unde velit animi veniam incidunt!</div>
+                <h2 class="content-tittle" id="cambio-tittle">Cambio de Fuentes</h2>
+                <div class="content-body col-body" id="cambio-body">
+                    <div class="centre-content-text" id="cambio-text">
+                        <p>En este lugar puedes modificar el aspecto de la página gracias a JS</p>
+                        <p>No te preocupes, solo afectará a la página actual.</p>
+                        <p>Prueba a hacer doble click sobre el fondo.</p>
+                    </div>
+                    <div class="content-form">
+                        <label>Tamaño Fuente: </label>
+                        <select id="fontsize-select">
+                            <option value="small">Pequeño</option>
+                            <option value="normal" selected>Normal</option>
+                            <option value="big">Grande</option>
+                            <option value="huge">Gigante</option>
+
+
+                        </select>
+                    </div>
+                    <div class="content-form">
+                        <label>Visitas: </label>
+                        <input type="text" readonly id="visitas">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="content-container" id="url-container">
+                <h2 class="content-tittle">URL Propia</h2>
+                <div class="content-body col-body">
+                    <div class="centre-content-text">
+                        <p>En el siguiente video muestro como realicé una URL propia.</p>
+                    </div>
+                    <div class="content-iframe">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EgX7XkZNmKM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
 
             <div class="content-container" id="certificado-container">
                 <h2 class="content-tittle">Certificado SSL</h2>
-                <div class="content-body">
-                    <div class="centre-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et deleniti incidunt asperiores quaerat possimus eius temporibus excepturi, odit, voluptas doloremque veritatis? Beatae, nam. Inventore doloremque unde velit animi veniam incidunt!</div>
+                <div class="content-body col-body">
+                    <div class="centre-content-text">
+                        <p>En el siguiente video muestro como realicé la obtención de certificados SSL.</p>
+                    </div>
+                    <div class="content-iframe">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ygeT2w0eXt0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
 
             <div class="content-container" id="ftp-seguro-container">
                 <h2 class="content-tittle">FTP Seguro</h2>
-                <div class="content-body">
-                    <div class="centre-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et deleniti incidunt asperiores quaerat possimus eius temporibus excepturi, odit, voluptas doloremque veritatis? Beatae, nam. Inventore doloremque unde velit animi veniam incidunt!</div>
+                <div class="content-body col-body">
+                    <div class="centre-content-text">
+                        <p>En el siguiente video muestro como realicé la obtención del certificado FTP.</p>
+                    </div>
+                    <div class="content-iframe">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/H08o0ogYkFQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
 
             <div class="content-container" id="configuracion-container">
                 <h2 class="content-tittle">Configuracion Servidores</h2>
-                <div class="content-body">
-                    <div class="centre-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et deleniti incidunt asperiores quaerat possimus eius temporibus excepturi, odit, voluptas doloremque veritatis? Beatae, nam. Inventore doloremque unde velit animi veniam incidunt!</div>
+                <div class="content-body col-body">
+                    <div class="centre-content-text">
+                        <p>En el siguiente video muestro como configurar el entorno Laragon.</p>
+                    </div>
+                    <div class="content-iframe">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZPsHrjGRA4w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
 
@@ -216,6 +262,7 @@
                 </div>
                 <div class="nav-option-desplegable"><h2>Despliegue</h2>
                     <div class="nav-desplegable">
+                        <div class="nav-option" id="url"><h3>URL Propia</h3></div>
                         <div class="nav-option" id="certificado"><h3>Certificado SSL</h3></div>
                         <div class="nav-option" id="ftp-seguro"><h3>FTP Seguro</h3></div>
                         <div class="nav-option" id="configuracion"><h3>Configuracion servidores</h3></div>
@@ -230,6 +277,7 @@
         </aside>
     </main>
 
+    <script src="js/app.js"></script>
     <script src="js/jqueryScripts.js"></script>
     <script src="js/calculadora.js"></script>
 </body>

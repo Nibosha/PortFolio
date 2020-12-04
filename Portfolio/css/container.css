@@ -82,7 +82,41 @@
    transform: scale(1) rotate(0deg);
 }
 
-.container-hidden{
-    left: -100%;
-    
+.container-center .content-body .content-iframe iframe{
+    pointer-events: all;
+}
+
+.content-form{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-form label, .content-form select{
+    font-size: 1.6rem;
+}
+
+.content-form select, .content-form input{
+    background-color: var(--font-color);
+    border-radius: 7%;
+    text-align: center;
+}
+
+
+.content-iframe{
+    width: 90%;
+    justify-content: center;
+}
+
+.content-iframe iframe{
+    width: 70vw;
+    height: 40vw;
+    pointer-events: none;
+}
+
+
+
+#certificado-container, #ftp-seguro-container, #configuracion-container{
+    overflow-y: scroll;
 }

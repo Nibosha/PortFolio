@@ -26,8 +26,8 @@ function pressButton(value){
 
 function doOperation(){  
     try {
-        ans = eval(screen);
-        screen = ans.toString();
+        a = eval(screen);
+        screen = a.toString();
     } catch (error) {
         screen = "Error";
     }

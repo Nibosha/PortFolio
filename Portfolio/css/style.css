@@ -8,7 +8,8 @@
     --font-color: #2f3e46;
     --border-color:  #8acfad;
     --deco-color-1: #4cc9f0;
-    --deco-color-2: #52796f;
+    --deco-color-2: #f72585;
+    --deco-color-2-darker: #940545;
 }
 
 html{
@@ -65,7 +66,7 @@ footer{
 main{
     width: 100%; 
     height: 85vh; 
-    background: var(--font-color);
+    background-color: #141b1f;
 }
 
 
@@ -153,6 +154,31 @@ main{
     white-space: nowrap;
 }
 
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--deco-color-2); 
+    background-image: linear-gradient(60deg, rgba(247,37,133,1) 0%, rgba(114,9,183,1) 25%,
+    rgba(58,12,163,1) 50%, rgba(67,97,238,1) 75%, rgba(76,201,240,1) 100%);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--deco-color-2-darker);
+    background-image: linear-gradient(60deg, rgb(150, 25, 81) 0%, rgb(61, 4, 99) 25%,
+    rgb(35, 8, 97) 50%, rgb(44, 65, 158)75%, rgb(60, 147, 173) 100%); 
+    filter: saturate(30%);
+  }
 
 @media screen and (max-width: 786px){
     header{

@@ -1,3 +1,4 @@
+/*
 const hamburguer = document.querySelector('.hamburguer');
 const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.nav-links li');
@@ -10,13 +11,9 @@ hamburguer.addEventListener("click",()=>{
     });
     
 });
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
-    pageName.classList.add('hide');
-  } else {
-    pageName.classList.remove('hide');
-  }
+*/
+if (localStorage.visitas === undefined) {
+  localStorage.setItem('visitas', 1);
+}else{
+  localStorage.setItem('visitas', parseInt(localStorage.visitas)+1);
 }
